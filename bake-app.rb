@@ -7,31 +7,26 @@ get("/") do
   html.concat("<ul>")
   html.concat('<style> body {background-color: #33CC66;} </style>')
   html.concat("<li><a href='/waffles'>show me waffles</a></li>")
-  html.concat("<li><a href='/pancakes'>show me pancakes</a></li>")
+  html.concat("<li><a href='/pancakes'>show me pancakes</a></li>") # pancakes page
   html.concat("<li><a href='/santa'>show me santa</a></li>")
   html.concat("<li><a href='/waffles/chocolate'>show me chocolate</a></li>")
   html.concat("<li><a href='/bake?baked_good=cookies&count=10'>bake 10 cookies</a></li>")
-  html.concat("\n<li><a href='/bake?baked_good=cronut&count=5' onmouseover='alert(this.href)'>bake 5 cronuts</a></li>")
-  html.concat("\n<li><a href='/bake?baked_good=cupcakes&count=1138' onmouseover='this.href=this.href+\"9\"'>bake 1138 cupcakes</a></li>")
+  html.concat("\n<li><a href='/bake?baked_good=cronut&count=6' onmouseover='alert(10)'> bake 6 cronuts</a></li>") # has mouse over alert
+  html.concat("<li><a href='/bake?baked_good=cupcakes&count=1138'>bake 1138 cupcakes</a></li>")
   html.concat("\n<li><a href='/bake?baked_good=santas&count=1'>bake over 900 santas</a></li>")
   html.concat("<li><a href='/eat?animal=santas&count=3'>eat 3 santas</a></li>")
   html.concat("</ul>")
   
-  html.concat('<xstyle>
+  html.concat('<style>
     body {
         background-color: #d0e4fe;
     }
     
-    h1 {
+    h1, li {
         color: orange;
         text-align: center;
     }
-    
-    p {
-        font-family: "Times New Roman";
-        font-size: 20px;
-    }
-  </xstyle>')
+  </style>')
 
   body(html)
 end
@@ -66,7 +61,7 @@ end
 
 # Visit, e.g., /bake?baked_good=waffles&count=20
 get("/bake") do
-  count      = Integer(params["count"])
+  count = Integer(params["count"])
   baked_good = String(params["baked_good"])
 
   html = "I'm going to bake #{count} #{baked_good}!"
