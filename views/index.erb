@@ -11,9 +11,18 @@
     <div id="page">
       <h1>Social Wall</h1>
       <form id="message-form" method="POST" action="/messages">
-        <textarea id="message-body" name="body" placeholder="Enter a message here."></textarea>
+        <input id="message-title" name="title" placeholder="Title (Optional)"></input>
+        <textarea id="message-body" name="body" placeholder="Message"></textarea>
+        <select name="text-format">
+          <option value=""></option>
+          <option value="bold">Bold</option>
+          <option value="italics">Italics</option>
+        </select>
+        <!--<input type="checkbox" name="text-format" value="bold">Bold-->
+        <!--<input type="checkbox" name="text-format" value="italics">Italics-->
         <button type="submit">Post Message</button>
       </form>
+      
       <% if messages.empty? %>
         <h2>Sorry, no messages. :(</h2>
       <% else %>
@@ -21,12 +30,33 @@
         <ol class="message-list">
           <% messages.each do |message| %>
             <li>
-              <div class="message-body">
-                <%= message.body %>
+              
+              <div class="message-title">
+                <xmp><%= message.title %></xmp>
               </div>
+              
+              <div class="message-body">
+                <% if message.text_format == "italics" %>
+                  <i><xmp><%= message.body %></xmp></i>
+                <% elsif message.text_format == "bold"%>
+                  <b><xmp><%= message.body %></xmp></b>
+                <% else %>
+                  <xmp><%= message.body %></xmp>
+                <% end %>
+                
+                <form action="/messages/<%= message.id %>/destroy" method="POST">
+                  <button type="submit">Delete</button>
+                </form>
+                
+                <form action="/messages/<%= message.id %>/edit" method="POST">
+                  <!--<button type="submit">Edit (Not working)</button>-->
+                </form>
+              </div>
+              
               <div class="message-timestamp">
                 Posted on <%= message.created_at.strftime("%B %d, %Y at %l:%M%p") %>
               </div>
+              
             </li>
           <% end %>
         </ol>

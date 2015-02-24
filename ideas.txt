@@ -1,0 +1,38 @@
+Ideas
+
+(In no particular order)
+
+- Add a new field to a message,
+  e.g., "current mood", "location",
+  anything really
+
+- Swearword filter
+
+- Detect URLs and turn them into
+  clickable links
+  
+- Prevent text so that it doesn't "run on"
+
+X Escape messages that contain HTML
+  and other invalid/special text (xmp tag simple fix for forcing literal txt display)
+
+- Allow users to create a message
+  with a custom background color
+
+X Allow users to choose a "message 
+  style", e.g., bold, italics, etc.
+
+X Allow users to delete a message
+
+- All users to edit an existing message
+
+- Keep track of when message was
+  last edited and display that info
+  to other users (e.g., created_at
+  vs. edited_at).
+
+- Allow users to like a message
+
+- Allow users to sort homepage by # of 
+  likes
+

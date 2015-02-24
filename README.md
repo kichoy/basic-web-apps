@@ -27,3 +27,10 @@ ruby wall-app.rb -p $PORT -o $IP
 
 To stop your application, press `Ctrl+c`.  That's "Control" plus the "c" key.
 
+
+-----
+Adding Features
+1. Take user input.
+2. Server-side code to respond to user input.
+3. Place to store information.
+4. Front end to display new info.

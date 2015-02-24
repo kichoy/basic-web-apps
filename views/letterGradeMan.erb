@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Letter Grade Man</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1>Letter Grade Man</h1>
+      
+      <form id="message-form" method="POST" action="/messages">
+        <textarea id="message-body" name="body" placeholder="Enter your grade percentage here."></textarea>
+        <button type="submit">Enter Grade Percentage</button>
+      </form>
+      
+      <% if messages.empty? %>
+        <h2>Sorry, no messages. :(</h2>
+      <% else %>
+          <h2>Messages</h2>
+      <% end %>
+      
+      <h2>Letter Grade Man does your grades.</h2>
+      <p>Enter in your grade percentage.</p>
+    </div>
+  </body>
+</html>
