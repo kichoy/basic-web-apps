@@ -16,7 +16,8 @@ DataMapper.auto_upgrade!()
 
 
 get("/") do
-  erb(:letterGradeMan)
+  records = Message.all(order: :created_at.desc)
+  erb(:letterGradeMan, locals: { messages: records })
 end
 
 post("/messages") do

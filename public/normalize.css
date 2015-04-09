@@ -6,13 +6,11 @@
  *    user zoom.
  */
 
-xmp,
 html {
-  font-family:  "Lucida Grande", "Lucida Sans", Helvetica, Verdana, serif; /* 1 */
+  font-family: "helvetica neue", helvetica,arial, "lucida grande", sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
 
 /**
  * Remove default margin.

@@ -1,3 +1,9 @@
+Adding Features
+1. Take user input.
+2. Server-side code to respond to user input.
+3. Place to store information.
+4. Front end to display new info.
+
 Ideas
 
 (In no particular order)
@@ -11,11 +17,10 @@ Ideas
 - Detect URLs and turn them into
   clickable links
   
-- Prevent text so that it doesn't "run on"
-
 X Escape messages that contain HTML
-  and other invalid/special text (xmp tag simple fix for forcing literal txt display)
-
+  and other invalid/special text 
+  (xmp tag simple fix for forcing literal txt display)
+  
 - Allow users to create a message
   with a custom background color
 
@@ -24,15 +29,43 @@ X Allow users to choose a "message
 
 X Allow users to delete a message
 
-- All users to edit an existing message
+- Allow users to edit an existing message
 
 - Keep track of when message was
   last edited and display that info
   to other users (e.g., created_at
   vs. edited_at).
 
-- Allow users to like a message
+X Allow users to like a message
 
-- Allow users to sort homepage by # of 
+X Allow users to sort homepage by # of 
   likes
+  
+  
+  
+2/26/15
+
+- Add a GPS button, which would allow users 
+  to include location in their message
+  
+- Make messages "private," requiring a password
+
+X Prevent text from continuing and making page ugly
+
+- A little paragraph that displays the information 
+  about all the posts on the site (eg number, 
+  most frequent word, most common hour for posting)
+  
+- "Correctly" display time
+
+- Quote another post
+
+- Ability to add formatting to posts
+
+- Detect emotions and add smileys 
+
+- Troll - Whenever the user scrolls over the submit
+  button, divert his/her cursor
+  
+- Incorporate Twitter hashtags
 
