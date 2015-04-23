@@ -60,6 +60,7 @@ GEM
       data_objects (= 0.10.14)
     do_sqlite3 (0.10.14)
       data_objects (= 0.10.14)
+    dotenv (2.0.1)
     fastercsv (1.5.5)
     ffi (1.9.3)
     json (1.8.1)
@@ -69,6 +70,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     multi_json (1.10.1)
+    pg (0.18.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -91,9 +93,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   datamapper (~> 1.2.0)
   dm-postgres-adapter
   dm-sqlite-adapter
+  dotenv
+  pg
   rerun
   sinatra (~> 1.4.5)
   sqlite3

@@ -1,3 +1,46 @@
+Ideas for wall-app.rb (started in Late Feb/Early March)
+
+
+1. paragraph info
+4. location
+5. correctly display time
+7. quote another post
+8. day style vs night style
+11. Detect emotions and add emojis  
+13. (troll) Whene user hovers over submit button, move mouse
+
+1. 
+    a A square of text or maybe a hover modal, that shows info (most frequent word, most common hour for posting)
+    b Stored using new member variables? Or - New class? Most likely: regular variables
+    c 
+4. 
+    a Initially: User enter location by hand. Hit a button, which uses html5 to get location. (store ==> long, lat)
+        Maybe get location using ip
+        http://ip-api.com/docs/api:json
+        use Ruby gem
+        http://www.rubygeocoder.com/
+        https://developers.google.com/maps/articles/geolocation
+        
+        https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse
+        http://stackoverflow.com/questions/6797569/get-city-name-using-geolocation
+    b Store in new member variable within Message class 
+    c In the action /messages save location from 
+    d Display location in div class message-info -- inside a <span>
+    
+5. Detect url in string
+    One way 
+        Break string into words, 
+            Ruby Implementation
+                string.split(" ") splits the string by " " (space) and gives array of 
+                string.start_with("http://")
+            
+
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+
 Ideas
 Not web related: Automatically purchase something from an online store
 
@@ -9,3 +52,4 @@ Not web related: Automatically purchase something from an online store
 
 
 Lunch Menu Rating 
+        

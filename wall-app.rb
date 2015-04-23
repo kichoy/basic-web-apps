@@ -105,8 +105,7 @@ post("/messages/*/like") do |message_id|
   end 
 end
 
-
-# sort messges by - NOT BEING USED
+# sort messages by - NOT BEING USED
 post("/sort-by") do 
   sort_by = params["sort-by"].chomp
   if (sort_by == "newFirst")
